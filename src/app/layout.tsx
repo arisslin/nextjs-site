@@ -1,17 +1,22 @@
 import './globals.css';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 type RootLayoutProps = { children: React.ReactNode };
+
+export const metadata: Metadata = {
+  title: {
+    template: '%s | Next MDX Test',
+    default: 'Next MDX Test',
+  },
+};
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='en'>
       <body>
         <Navigation />
-        <main>
-          <h1>{'Title'}</h1>
-          {children}
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );
@@ -24,13 +29,7 @@ const Navigation = () => (
         <Link href='/'>Home</Link>
       </li>
       <li>
-        <Link href='/my-mdx-page'>My MDX Page</Link>
-      </li>
-      <li>
-        <a href='#'>Legal</a>
-      </li>
-      <li>
-        <a href='#'>Privacy</a>
+        <Link href='/mdx-example'>Next MDX example</Link>
       </li>
     </ul>
   </nav>
