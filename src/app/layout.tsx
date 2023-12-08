@@ -7,22 +7,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='en'>
       <body>
-        <nav>
-          <ul>
-            <li>
-              <Link href='/'>Home</Link>
-            </li>
-            <li>
-              <Link href='/my-mdx-page'>My MDX Page</Link>
-            </li>
-            <li>
-              <a href='#'>Legal</a>
-            </li>
-            <li>
-              <a href='#'>Privacy</a>
-            </li>
-          </ul>
-        </nav>
+        <Navigation />
         <main>
           <h1>{'Title'}</h1>
           {children}
@@ -31,3 +16,22 @@ export default function RootLayout({ children }: RootLayoutProps) {
     </html>
   );
 }
+
+const Navigation = () => (
+  <nav>
+    <ul>
+      <li>
+        <Link href='/'>Home</Link>
+      </li>
+      <li>
+        <Link href='/my-mdx-page'>My MDX Page</Link>
+      </li>
+      <li>
+        <a href='#'>Legal</a>
+      </li>
+      <li>
+        <a href='#'>Privacy</a>
+      </li>
+    </ul>
+  </nav>
+);
