@@ -7,7 +7,7 @@ type PageProps = {
   params: { slug: string };
 };
 
-type Frontmatter = {
+export type Frontmatter = {
   title: string;
 };
 
