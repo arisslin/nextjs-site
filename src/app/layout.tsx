@@ -1,6 +1,6 @@
 import './globals.css';
-import Link from 'next/link';
 import { Metadata } from 'next';
+import Navigation from '@/components/navigation';
 
 type RootLayoutProps = { children: React.ReactNode };
 
@@ -21,16 +21,3 @@ export default function RootLayout({ children }: RootLayoutProps) {
     </html>
   );
 }
-
-const Navigation = () => (
-  <nav>
-    <ul>
-      <li>
-        <Link href='/'>Home</Link>
-      </li>
-      <li>
-        <Link href='/mdx-example'>Next MDX example</Link>
-      </li>
-    </ul>
-  </nav>
-);
